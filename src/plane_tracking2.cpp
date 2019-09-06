@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     {
         //read laser pose file  test1_image_pose
         // ifstream read_pose("/home/cj/Downloads/outdoor_data/test6_image_pose.txt", ios::binary);
-        ifstream read_pose("../data/dataset1/cam3_medium_view.txt");
+        ifstream read_pose("../data/data_test/cam3_medium_view.txt");
         string line_pose; 
         std::stringstream filename;
         int idx = 0;
@@ -82,7 +82,7 @@ int main(int argc, char **argv)
             Eigen::Quaterniond q(R_cam*rot*q_rot_loam);
             Eigen::Vector3d p(rot*p_laser+Transform.topRightCorner(3, 1).cast<double>());
             filename.str("");
-            filename << "../data/dataset1/image/" << camid << "_undistort/" << setw(6) << setfill('0')<< file <<".jpg";
+            filename << "../data/data_test/image/" << camid << "_undistort/" << setw(6) << setfill('0')<< file <<".jpg";
             cout << "reading " << filename.str() << endl;
             cv::Mat img = cv::imread(filename.str());
             

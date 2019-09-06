@@ -38,7 +38,7 @@ subtract after projection to obtain the surface
 #### 3. Other results.
 
 Use the lidar points directly instead of the corner points as the correspondence: fewer points and undesirable tracking results
-[matched_lidar_points](support_files/matches_medium.png)
+![matched_lidar_points](support_files/matches_medium.png)
 
 Use one way optical tracking only: the projected lidar points are not stable and result in super poor results  
 
